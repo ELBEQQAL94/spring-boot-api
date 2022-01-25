@@ -1,8 +1,11 @@
 package com.learning.app.ws.dto;
 
+import com.learning.app.ws.requests.AddressRequest;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -17,4 +20,6 @@ public class UserDTO {
     private String encryptedPassword;
     private String emailVerificationToken;
     private Boolean emailVerificationStatus = false;
+    private List<AddressDTO> addresses;
+    private ContactDTO contact;
 }

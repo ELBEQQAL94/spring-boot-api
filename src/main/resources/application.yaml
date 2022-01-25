@@ -1,11 +1,27 @@
 server:
   port: 8082
+  servlet:
+    context-path: /api
 
 spring:
   jpa:
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
   datasource:
     url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:wsdb}?useSSL=true
     username: ${POSTGRES_USER:postgres}
     password: ${POSTGRES_POSSWORD:postgres}
+
+  logging:
+    level:
+        org.hibernate:
+          sql: debug
+          type:
+            descriptor:
+              sql:
+                BasicBinder: trace
+
+

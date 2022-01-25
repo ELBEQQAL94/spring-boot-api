@@ -6,7 +6,7 @@ import java.security.SecureRandom;
 import java.util.Random;
 
 @Component
-public class GenerateId {
+public class GenerateStringId {
     private final Random RANDOM = new SecureRandom();
     private final String ALPHANUMERIC = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
