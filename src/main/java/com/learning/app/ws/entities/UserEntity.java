@@ -32,6 +32,9 @@ public class UserEntity {
     @Column(nullable = false, unique = true, length = 50)
     private String email;
 
+    @Column(columnDefinition = "boolean default false")
+    private Boolean admin;
+
     @Column(nullable = false)
     private String encryptedPassword;
 

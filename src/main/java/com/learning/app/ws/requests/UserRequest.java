@@ -31,6 +31,8 @@ public class UserRequest {
     @Size(min = 6, max = 50)
     private String password;
 
+    private Boolean admin;
+
     private List<AddressRequest> addresses;
 
     private ContactRequest contact;
